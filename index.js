@@ -14,7 +14,7 @@ fetchData();
 function appendData(data) {
 
   container.innerHTML = null;
-  
+
   data.map(function(el){
     let container = document.getElementById("container");
     let div = document.createElement("div");
@@ -56,3 +56,21 @@ function sortHL() {
   //console.log("data:",data)
   appendData(data);
 }
+
+//filter the data from api
+//hoew to keep original data
+//dynamic filtering
+
+
+function filter() {
+  let query = document.getElementById("query").value;
+  //console.log("query:", query);
+
+  data = data.filter(function (el) {
+  return  el.title.toLowerCase().includes(query);
+    
+  });
+  appendData(data);
+}
+
+
