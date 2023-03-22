@@ -33,7 +33,16 @@ function appendData(data) {
     let h3 = document.createElement("h3");
     h3.innerHTML = el.title;
 
-    div.append(img,p1,h2,h3)
+    let button = document.createElement("button");
+    button.innerHTML = "Add To Cart";
+
+    button.addEventListener("click", myFunction);
+    function myFunction() {
+     alert("items sucessfully added to the cart")
+    }
+    
+
+    div.append(img, p1, h2, h3, button);
 
 
   })
